@@ -1,0 +1,35 @@
+.sticky {
+	display: block;
+}
+
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+// Styling for Privacy Policy and Refund Policy Pages
+
+.post-18 .entry-content,
+.post-3 .entry-content {
+	max-width: 56.25rem;
+	margin: auto;
+	margin-bottom: 5rem;
+	padding: 0 1rem;
+
+	a {
+		color: $color_light_green;
+		font-weight: bold;
+	}
+}

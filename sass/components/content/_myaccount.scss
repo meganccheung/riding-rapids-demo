@@ -1,0 +1,94 @@
+.page-id-17 {
+    .woocommerce-MyAccount-content {
+        padding: 2rem 2rem 0 2rem;
+        a {
+            color: black;
+          }
+    }
+
+    .woocommerce-MyAccount-navigation {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0;
+            padding: 0;
+        }
+    
+        li {
+            margin: .5rem;
+        }
+    } 
+
+    .woocommerce-MyAccount-navigation {
+        a {
+            border: $color_light_green 2.5px solid;
+            color: black;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            border-radius: 4px;
+            text-decoration: none;
+        
+            &:hover {
+                background-color: $color_light_green;
+                color: white;
+            }
+            &:active,
+            &:focus {
+                transform: scale(0.92);
+                color: white;
+                background-color: $color_light_green;
+            }
+        }
+    } 
+
+    li.woocommerce-MyAccount-navigation-link {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 50em) {
+        .woocommerce-MyAccount-navigation {
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                margin: 0;
+                padding: 0;
+            }
+        
+            li {
+                margin: .5rem;
+            }
+        } 
+
+        div.woocommerce {
+            display: block;
+            margin: 0 auto;
+            width: $desktopMedium
+        }
+    }
+
+    .woocommerce-form {
+        button {
+            background-color: $color_yellow;
+
+            &:hover {
+                background-color: $color_dark_yellow;
+                color: white;
+            }
+            &:active,
+            &:focus {
+                transform: scale(0.92);
+                color: white;
+                background-color: $color_dark_yellow;
+            }
+        }
+    }  
+}
+
+
+ 
+
+

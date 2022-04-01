@@ -1,0 +1,44 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: $color_yellow;
+  color: $color_grey;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: none;
+  &:hover {
+    border-color: $color__border-button-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color__border-button-focus;
+  }
+}
+
+.book-now-btn.faux-btn,
+.faq-btn.faux-btn {
+  background-color: $color_yellow;
+  color: $color_grey;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: $color_dark_yellow;
+    color: $color_white;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color_dark_yellow;
+    color: $color_white;
+    text-decoration: none;
+    transform: scale(0.92);
+  }
+}

@@ -1,0 +1,186 @@
+.home-about-section {
+  max-width: $content-small;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  h2 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h2 {
+    padding-top: 3rem;
+    @media screen and (min-width: 62em) {
+      padding-top: 1.5rem;
+    }
+  }
+}
+
+.about-cta-container {
+  width: 12.3rem;
+  margin: 0 auto;
+  a {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: $color_yellow 1px solid;
+  
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: black;
+      background-color: $color_yellow;
+    }
+  }
+}
+
+.featured-products-container {
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+
+.product-details {
+  padding: 6rem 1.5rem 4rem 3.25rem;
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    color: $color_grey;
+    background-color: $color_yellow;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  
+    &:hover {
+      color: white;
+      background-color: $color_dark_yellow;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $color_dark_yellow;
+      color: $color_white;
+      text-decoration: none;
+      transform: scale(0.92);
+    }
+
+  }
+}
+
+.home .post-185 {
+  color: $color_white;
+  background-color: $color_dark_green;
+}
+
+.home .post-192 {
+  color: $color_white;
+  background-color: $color_medium_green;
+}
+
+.home .post-187 {
+  color: $color_white;
+  background-color: $color_light_green;
+}
+
+.testimonials-container,
+.google-yelp-container {
+  text-align: center;
+  padding-bottom: 2rem;
+  @include mobile-padding;
+}
+
+.icons-container {
+  display: block;
+
+  img {
+    max-width: 200px;
+  } 
+}
+
+.yelp-container,
+.google-container {
+  display: grid;
+  grid-auto-rows: 1fr auto;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  a {
+    color: black;
+  }
+
+}
+
+div.woocommerce-product-details__short-description {
+  padding: 0;
+}
+
+blockquote.wp-block-quote {
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 50em) {
+  .single-tour-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &:nth-child(odd).single-tour-product.post-192 {
+      .product-details {
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
+  .testimonials-yelp-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2rem 0 3rem 0;
+  }
+
+  .icons-container {
+    display: block;
+    padding-top: 0.8rem;
+  }
+
+  .google-yelp-container {
+    border-left: 1px solid $color_dark_green;
+  }
+
+  .icons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      padding: 0;
+    }
+  }
+  .book-now-video {
+    video {
+      height: 70vh;
+      object-fit: cover;
+    }
+  }
+}

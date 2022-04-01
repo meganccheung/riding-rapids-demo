@@ -1,0 +1,136 @@
+.about-wrapper {
+  padding: 0 1rem;
+  @include flex-center;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  max-width: $content-small;
+
+  @media (min-width: 50rem) {
+    max-width: $content-medium;
+  }
+
+  @media (min-width: 64rem) {
+    max-width: $content-large;
+  }
+}
+
+.about-section,
+.staff-wrapper,
+.river-section,
+.land-section {
+  margin-bottom: 5rem;
+}
+
+.about-section {
+  @include flex-center;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @media (min-width: 50rem) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .company-story {
+      max-width: 50%;
+
+      h2 {
+        margin-block-start: 0;
+      }
+    }
+  }
+}
+
+.staff-wrapper {
+  @include flex-center;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 1rem;
+
+  .guides-intro {
+    margin-bottom: 5rem;
+    max-width: 62.5rem;
+  }
+
+  .tour-guides {
+    @include flex-center;
+    max-width: 38.75rem;
+    margin-bottom: 2.5rem;
+
+    .team-member-info {
+      @include flex-center;
+
+      @media (min-width: 50rem) {
+        display: unset;
+      }
+    }
+  }
+
+  .tour-guide-wrapper {
+    @media (min-width: 67.5rem) {
+      .tour-guides {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 81.25rem;
+
+        h3 {
+          margin-block-start: 0;
+        }
+
+        img {
+          width: 45%;
+          padding: 2.5rem;
+        }
+
+        .team-member-info {
+          width: 55%;
+          padding: 2.5rem;
+        }
+
+        &:nth-child(2n + 2) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
+
+.river-land-section {
+  max-width: 65.625rem;
+
+  .river-section,
+  .land-section {
+    max-width: 40rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  @media (min-width: 56.25rem) {
+    max-width: 100%;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem 2rem;
+    grid-template-areas: "one two";
+
+    .river-section {
+      grid-area: one;
+    }
+    .land-section {
+      grid-area: two;
+    }
+
+    .river-section,
+    .land-section {
+      max-width: 80%;
+    }
+  }
+}

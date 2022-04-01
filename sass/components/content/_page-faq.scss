@@ -1,0 +1,145 @@
+.faq-intro-container {
+    max-width: $content-medium;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem;
+    p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.general-faq-container,
+.rafting-faq-section,
+.snowshoeing-faq-section  {
+    padding-bottom: 5rem;
+    h2 {
+        @include mobile-padding;
+        text-align: center;
+    }
+}
+
+.container {
+    max-width: $content-large;
+
+    h3 {
+        color: $color_grey;
+        font-family: $font__heading;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin: 0;
+        text-transform: uppercase;
+        width: 90%;
+      }
+      
+      p {
+        color: $color_grey;
+        font-family: $font__main;
+        margin: 20px;
+      }
+}
+  
+.acc {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+  
+  
+.acc_ctrl {
+    background: $color_white;
+    border: none;
+    border-radius: 0;
+    border-bottom: solid 1px $color_light_green;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding: 2rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+    background-color: $color_light_green;
+        h3 {
+            color: $color_white;
+        }
+    }
+
+    &:before {
+        background: $color_light_green;
+        content: '';
+        height: 2px;
+        margin-right: 37px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        width: 14px;
+    }
+
+    &:after {
+        background: $color_light_green;
+        content: '';
+        height: 2px;
+        margin-right: 37px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 14px;
+
+        &:hover {
+            background-color: white;
+        }  
+    }
+
+    &:hover::after,
+    &:hover::before{
+        background: white;
+    }
+}
+
+  
+.acc_ctrl.active:before {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+  
+.acc_ctrl.active h2, 
+.acc_ctrl:focus h2 {
+    position: relative;
+}
+  
+.acc_panel {
+    background: $color_white;
+    display: none;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 50em) {
+    .general-faq-container,
+    .rafting-faq-section,
+    .snowshoeing-faq-section {
+        max-width: $content-medium;
+        display: block;
+        margin: 0 auto;
+    }
+}

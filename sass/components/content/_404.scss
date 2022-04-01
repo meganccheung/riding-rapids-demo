@@ -1,0 +1,39 @@
+.error-404 {
+  background-color: $color_light_green;
+  color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 2rem;
+
+  @media (min-width: 46.875rem) {
+    align-items: center;
+  }
+
+  p {
+    max-width: 26.875rem;
+  }
+
+  .faux-btn {
+    background-color: $color_yellow;
+    color: $color_grey;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: $color_dark_yellow;
+      color: $color_white;
+      text-decoration: none;
+    }
+
+    &:active {
+      background-color: $color_dark_yellow;
+      color: $color_white;
+      text-decoration: none;
+      transform: scale(0.92);
+    }
+  }
+}

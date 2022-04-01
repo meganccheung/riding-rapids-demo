@@ -1,0 +1,62 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+
+// Margin center
+@mixin mc($set-tb: false, $t: 0, $b: 0) {
+    @if($set-tb){
+        margin: {
+            top: $t;
+            bottom: $b;
+            left: auto;
+            right: auto;
+        }
+    }@else {
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
+@mixin flatten($is-list: false, $is-text: true) {
+    margin: 0;
+    padding: 0;
+    @if($is-list: true){
+        list-style: none;
+    }
+    @if($is-text) {
+        line-height: 1;
+    }
+    
+}
+
+@mixin mq($w){
+    @media screen and (min-width: $w){
+        @content;
+    }
+}
+
+@mixin mobile-padding {
+    padding: 0 2rem 0 2rem;
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin box-shadow {
+    box-shadow: 2px 10px 20px -10px #1f1f1fab;
+}

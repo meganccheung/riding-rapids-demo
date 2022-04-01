@@ -1,0 +1,22 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+// Covert PX to EMs
+@function em($px, $bc: 16) {
+    @return #{$px/$bc}em;
+}
+
+// Media Query Breakpoints
+$desktopLarge: em(1050);
+$desktopMedium: em(770);
+$tabletLarge: em(670);
+$tabletSmall: em(500);
+$phoneLarge: em(330);
+$phoneSmall: em(320);
+
+//Max-width for Contents
+$content-small: 800px;
+$content-medium: 1024px;
+$content-large: 1600px;
+$content-full: 1920px;
+

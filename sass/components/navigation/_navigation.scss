@@ -1,0 +1,227 @@
+/* Header
+--------------------------------------------- */
+.site-header {
+  color: #fff;
+  position: fixed;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* On Scroll Styling
+ --------------------------------------------- */
+#masthead {
+  background-color: $color_scroll_bg;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  max-width: 1920px;
+
+  @media screen and (min-width: 52em) {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    justify-content: center;
+  }
+}
+#masthead.scroll {
+  background-color: $color_scroll_bg;
+  color: #eef;
+}
+
+.site-branding {
+  padding: 1rem;
+
+  img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    z-index: 9999;
+    margin-left: 4rem;
+    @media screen and (min-width: 48em) {
+      top: 0;
+      left: 0;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+  .site-description {
+    display: none;
+    margin-left: 1rem;
+    @media screen and (min-width: 52em) {
+      display: block;
+      color: white;
+    }
+  }
+}
+
+.site-title {
+  font-size: 1.75rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 50em) {
+  .site-branding {
+    text-align: center;
+  }
+
+  @supports (grid-area: auto) {
+    .site-branding {
+      grid-column: 1/2;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .site-branding a {
+    margin-left: 2rem;
+  }
+}
+
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  font-size: 1rem;
+  background-color: $color_scroll_bg;
+
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+  }
+  a {
+    font-size: 1em;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.53);
+  }
+  svg {
+    fill: #fff;
+  }
+}
+
+.main-navigation li.current-menu-item > a,
+.main-navigation li.current_page_item > a,
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+  text-underline-offset: 6px;
+  text-decoration: underline 3px solid;
+  text-decoration-color: $color_yellow;
+  background-color: transparent;
+}
+
+.main-navigation li.current-menu-item svg path,
+.main-navigation li.current_page_item svg path,
+.main-navigation li:hover > a svg path,
+.main-navigation li.focus > a svg path {
+  fill: $color_yellow;
+  background-color: transparent;
+}
+
+.main-navigation.toggled ul {
+  display: block;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: -4.5rem;
+  right: 1rem;
+  z-index: 1100;
+  display: block;
+  width: 3.75rem;
+  border: none;
+  background: transparent;
+  color: #fff;
+  svg path {
+    fill: currentColor;
+  }
+}
+
+.menu-main-menu-container {
+  position: absolute;
+  top: -3px;
+  width: 100%;
+}
+
+@media screen and (min-width: 52em) {
+  .menu-main-menu-container {
+    position: fixed;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation {
+    width: auto;
+    position: static;
+    align-self: center;
+    margin-right: 2vw;
+    background-color: transparent;
+
+    a {
+      margin-top: 0rem;
+    }
+  }
+
+  .main-navigation ul,
+  .main-navigation.toggled ul {
+    display: flex;
+    justify-content: end;
+  }
+
+  .main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+    background-color: #111;
+    flex-direction: column;
+  }
+
+  .main-navigation ul ul a {
+    left: -999em;
+    top: 0;
+    width: 200px;
+    text-align: left;
+  }
+
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    left: 100%;
+    top: 0;
+  }
+
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    left: auto;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .menu-header-container {
+    margin-right: 2rem;
+  }
+}

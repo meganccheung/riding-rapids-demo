@@ -1,0 +1,24 @@
+.book-now-cta-container,
+.faq-cta-container {
+
+    background: #f3f3f3;
+    padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    
+    .book-now-cta,
+    .faq-cta {
+
+        @include flex-center;
+        padding-bottom: 2.5rem;
+        max-width: 31.25rem;
+
+        p {
+            margin-block-start: 0;
+        }
+        
+    }
+
+}

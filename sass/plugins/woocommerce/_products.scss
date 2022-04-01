@@ -1,0 +1,200 @@
+/* Archive Products Page */
+
+.tour-section {
+
+	// mobile padding
+	h2, .woocommerce-loop-product__title, .woocommerce-product-details__short-description, .price, .rapid-classification, .trail-difficulty {
+		@include mobile-padding;
+	}
+
+	@include mq($desktopLarge) {
+
+		margin: auto;
+
+		ul.products {
+			@include mc;
+			column-gap: 1.75rem;
+		}
+	}
+}
+
+.tour-selection {
+	display: flex;
+    align-items: baseline;
+    justify-content: center;
+	gap: 1.5rem;
+	margin-bottom: 5rem;
+	
+	h2 {
+		font-family: $font__main;
+		font-size: 1rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	@include mq($tabletLarge) {
+
+		margin: 1rem auto 3rem;
+
+		h2, ul {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.tour-package-season {
+	@include mq($tabletLarge){
+		background-color: #f8f8f8;
+	}
+}
+
+.nav-tour {
+	list-style-type: none;
+
+	ul {
+		margin: 2.5rem 0 0 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-start;
+		column-gap: 2rem;
+
+		@include mq($tabletLarge) {
+			justify-content: center;
+			margin-bottom: 3rem;
+		}
+
+		li {
+			display: inline;
+
+			a {
+				color: $color_dark_green;
+			}
+		}
+	}
+}
+
+#summer, #winter {
+	background-color: #f8f8f8;
+	font-size: 2rem;
+    margin: 0 auto;
+    padding: 6rem 0;
+	text-align: center;
+	
+	@include mq($tabletLarge) {
+		font-size: 3rem;
+		padding: 5rem 3rem;
+	}
+}
+
+ul.products {
+	margin: 0;
+	padding: 0;
+
+	// Riding Rapids Stylng
+	@include mq($tabletLarge) {
+		max-width: $content-medium;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+
+	li.product {
+		list-style: none;
+		position: relative;
+		margin-bottom: 2em;
+		background-color: $color_white;
+		@include mq($tabletLarge) {
+			box-shadow: 2px 10px 20px -25px #1f1f1fab;
+			display: flex;
+			flex-direction: column;
+			border-radius: 5px;
+		}
+
+		h3 {
+			color: $color_light_green;
+		}
+
+		h4 { 
+			font-size: 1.25rem;
+			margin-bottom: 0;
+		}
+
+		.tour-icons {
+			width: 1.5rem;
+			height: 1.5rem;
+			position: relative;
+			bottom: -0.35rem;
+			margin-right: 0.5rem;
+			fill: $color__text-main;
+		}
+	
+		.woocommerce-product-details__short-description {
+	
+			p {
+				margin-top: 0;
+			}
+
+			@include mq($tabletLarge) {
+				flex: 1 1 auto;
+			}
+		}
+
+		p {
+			 margin-bottom: 0;
+		}
+
+
+		img {
+			display: block;
+			max-height: 15.625rem;
+			width: 41.875rem;
+			object-fit: cover;
+
+			@include mq($tabletLarge) {
+				border-radius: 5px 5px 0 0;
+			}
+		}
+
+		.archive-price-classification-container {
+			@include mq($tabletSmall) {
+				display: flex;
+			}
+			@include mq($tabletLarge) {
+				display: block;
+			}
+			@include mq($desktopLarge) {
+				display: flex;
+				flex: 1 1 auto;
+			}
+		}
+
+		.button {
+			display: block;
+			grid-column: 1 / 3;
+		}
+
+		// archive page, learn more button
+		.add_to_cart_button {
+			text-decoration: none;
+			width: 8rem;
+			text-align: center;
+			padding: 0.625rem 1.25rem;
+			margin: 1.6625rem 2rem;
+			border-radius: 0.25rem;
+			font-size: 0.9rem;
+			color: $color_grey;
+			background-color: $color_yellow;
+
+			&:hover, &:focus, &:active {
+				background-color: $color_dark_yellow;
+				color: $color_white;
+			}
+
+			&:focus, &:active {
+				transform: scale(0.92);
+			}
+		}
+	}
+}

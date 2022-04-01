@@ -1,0 +1,22 @@
+.woocommerce-message {
+  .button,
+  .wc-forward,
+  a {
+    color: black;
+  }
+}
+
+a {
+  color: $color_white;
+
+  &:visited {
+    color: $color_white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color_white;
+    text-decoration: underline 3px;
+  }
+}
